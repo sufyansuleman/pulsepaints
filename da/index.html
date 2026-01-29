@@ -114,9 +114,6 @@
         <li><span class="sidebar-label">Instagram:</span> <span style="color:var(--gray);">(kommer snart)</span></li>
       </ul>
       <a class="sidebar-btn" href="#contact">Book workshop</a>
-      <div class="sidebar-form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD0-PLACEHOLDER-FORM-URL/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kontaktformular">Indlæser…</iframe>
-      </div>
     </section>
     <section id="contact">
       <h2>Kontakt</h2>
@@ -126,8 +123,7 @@
         <li><span class="label">Instagram:</span> <span style="color:var(--gray);">(kommer snart)</span></li>
       </ul>
       <div class="contact-form-placeholder">
-        <!-- Google Form embed for contact (replace URL with your real form) -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD0-PLACEHOLDER-FORM-URL/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kontaktformular">Indlæser…</iframe>
+        <button class="cta-btn" id="openContactModal" type="button">Kontakt os</button>
       </div>
     </section>
   </main>
@@ -140,17 +136,55 @@
       <li><span class="sidebar-label">Instagram:</span> <span style="color:var(--gray);">(kommer snart)</span></li>
     </ul>
     <a class="sidebar-btn" href="#contact">Book workshop</a>
-    <div class="sidebar-form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfD0-PLACEHOLDER-FORM-URL/viewform?embedded=true" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Kontaktformular">Indlæser…</iframe>
-    </div>
   </aside>
   <footer>
     &copy; <span id="year"></span> pulsepaint. Alle rettigheder forbeholdes. | CVR: [tilføjes]
   </footer>
+  <!-- Kontakt Modal -->
+  <div id="contactModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);align-items:center;justify-content:center;">
+    <div style="background:#fff;border-radius:16px;max-width:400px;width:90vw;padding:2.2rem 1.5rem 1.5rem 1.5rem;box-shadow:0 8px 32px #0002;position:relative;">
+      <button id="closeContactModal" style="position:absolute;top:0.7em;right:1em;background:none;border:none;font-size:1.5em;line-height:1;color:#aaa;cursor:pointer;">&times;</button>
+      <h2 style="margin-top:0;color:var(--accent);font-size:1.3em;">Kontakt PulsePaint</h2>
+      <form id="customContactForm" autocomplete="off" style="display:flex;flex-direction:column;gap:1em;">
+        <label>Navn
+          <input name="name" type="text" required style="width:100%;padding:0.5em;margin-top:0.2em;border-radius:6px;border:1px solid var(--border);">
+        </label>
+        <label>Telefonnummer
+          <input name="phone" type="tel" style="width:100%;padding:0.5em;margin-top:0.2em;border-radius:6px;border:1px solid var(--border);">
+        </label>
+        <label>Email
+          <input name="email" type="email" required style="width:100%;padding:0.5em;margin-top:0.2em;border-radius:6px;border:1px solid var(--border);">
+        </label>
+        <label>Besked
+          <textarea name="question" required rows="4" style="width:100%;padding:0.5em;margin-top:0.2em;border-radius:6px;border:1px solid var(--border);"></textarea>
+        </label>
+        <button type="submit" class="cta-btn" style="margin-top:0.5em;">Send</button>
+        <div id="contactFormMsg" style="font-size:1em;color:var(--accent);margin-top:0.5em;"></div>
+      </form>
+    </div>
+  </div>
   <script src="../assets/nav.js"></script>
   <script>
     // Opdater år automatisk
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Kontakt Modal logik
+    const openBtn = document.getElementById('openContactModal');
+    const modal = document.getElementById('contactModal');
+    const closeBtn = document.getElementById('closeContactModal');
+    if(openBtn && modal && closeBtn) {
+      openBtn.onclick = () => { modal.style.display = 'flex'; };
+      closeBtn.onclick = () => { modal.style.display = 'none'; };
+      modal.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+    }
+    // Custom form submit (no backend, just show message)
+    const form = document.getElementById('customContactForm');
+    if(form) {
+      form.onsubmit = function(e) {
+        e.preventDefault();
+        document.getElementById('contactFormMsg').textContent = 'Tak for din besked! Din besked blev ikke sendt (statisk side). Skriv venligst til pulsepaint@gmail.com.';
+        setTimeout(()=>{modal.style.display='none';}, 2200);
+      };
+    }
   </script>
 </body>
 </html>
