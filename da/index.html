@@ -1,6 +1,23 @@
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        <p>“Dette team lavede fantastiske figurer til vores artikel.”</p>
+        <footer>— Dr. Hansen, Aarhus Universitet</footer>
+      </blockquote>
+      <blockquote>
+        <p>“Meget professionel og kreativ service.”</p>
+        <footer>— Mette Jensen, Kunde</footer>
+      </blockquote>
+      <blockquote>
+        <p>“Vi var imponerede over kvaliteten og hurtigheden.”</p>
+        <footer>— BioLab, Aarhus</footer>
+      </blockquote>
+    </section>
 <!DOCTYPE html>
 <html lang="da">
 <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>pulsepaint – Kunst, Videnskab & Workshops i Aarhus</title>
@@ -10,25 +27,39 @@
 <body>
   <a href="#main-content" class="skip-link">Spring til indhold</a>
   <header>
-    <div class="navbar">
-      <span class="brand">PulsePaint</span>
-      <nav class="nav-links" id="site-nav">
-        <a href="#gallery">Portfolio</a>
-        <a href="#workshops">Workshops</a>
-        <a href="#sales">Kunstsalg</a>
-        <a href="#contact">Kontakt</a>
-        <span class="lang-switch" style="background:none;">
+    <nav>
+      <a href="#home" class="logo"><img src="../assets/logo-color.png" alt="Pulse Studio" style="height:40px;vertical-align:middle;"></a>
+      <ul class="main-nav">
+        <li><a href="#home">Forside</a></li>
+        <li><a href="#gallery">Portfolio</a>
+          <ul class="submenu">
+            <li><a href="#science">Videnskabelig Illustration</a></li>
+            <li><a href="#covers">Tidsskriftsforsider</a></li>
+            <li><a href="#murals">Vægmalerier</a></li>
+          </ul>
+        </li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#sales">Kunstsalg</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+        <li class="lang-switch">
           <a href="../en/index.html">EN</a> /
           <a href="../da/index.html" class="active">DA</a>
-        </span>
-      </nav>
-      <button class="nav-toggle" aria-label="Åbn menu" aria-controls="site-nav" aria-expanded="false">
+        </li>
+      </ul>
+        <button class="nav-toggle" aria-label="Åbn menu" aria-controls="site-nav" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-    </div>
+    </nav>
   </header>
+    <section id="hero">
+      <h1>Velkommen til Pulse Studio</h1>
+      <h2>Kreative Videnskabelige Illustrationer</h2>
+      <p>Din one-stop-shop for kunst, videnskab og kreative løsninger i Aarhus.</p>
+      <a href="#contact" class="btn primary">Kontakt os</a>
+      <a href="#portfolio" class="btn secondary">Se portfolio</a>
+    </section>
   <div class="layout">
     <main id="main-content">
     <section class="hero">
@@ -37,44 +68,38 @@
       <a class="cta-btn" href="#contact">Kontakt / Book workshop</a>
     </section>
 
-    <section id="gallery">
+    <section id="portfolio">
       <h2>Portfolio</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="../images/cover-placeholder.jpg" alt="Tidsskriftsforside: Celler i blomst">
-          <div class="gallery-info">
-            <div class="gallery-title">Celler i blomst</div>
-            <div class="gallery-meta">Digital illustration, 2025</div>
-            <div class="gallery-price">DKK 1.200 (tryk)</div>
-            <a class="gallery-enquire" href="mailto:pulsepaint@gmail.com?subject=Forespørgsel%20om%20Celler%20i%20blomst" tabindex="0" aria-label="Forespørg om Celler i blomst">Forespørg</a>
-          </div>
+            <img src="assets/images/image1.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 1">
+          <p>Billedtekst 1</p>
+          <div class="gallery-price">Pris: DKK 1.000</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/painting-placeholder.jpg" alt="Maleri: Flodens hukommelse">
-          <div class="gallery-info">
-            <div class="gallery-title">Flodens hukommelse</div>
-            <div class="gallery-meta">Akryl på lærred, 2024</div>
-            <div class="gallery-price">DKK 3.800 (original)</div>
-            <a class="gallery-enquire" href="mailto:pulsepaint@gmail.com?subject=Forespørgsel%20om%20Flodens%20hukommelse" tabindex="0" aria-label="Forespørg om Flodens hukommelse">Forespørg</a>
-          </div>
+            <img src="assets/images/image2.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 2">
+          <p>Billedtekst 2</p>
+          <div class="gallery-price">Pris: DKK 1.200</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/wall-placeholder.jpg" alt="Vægmaleri: Skolemur">
-          <div class="gallery-info">
-            <div class="gallery-title">Skolemur</div>
-            <div class="gallery-meta">Vægmaleri, 2023</div>
-            <div class="gallery-price">Bestillingsarbejde</div>
-            <a class="gallery-enquire" href="mailto:pulsepaint@gmail.com?subject=Forespørgsel%20om%20Skolemur" tabindex="0" aria-label="Forespørg om Skolemur">Forespørg</a>
-          </div>
+            <img src="assets/images/image3.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 3">
+          <p>Billedtekst 3</p>
+          <div class="gallery-price">Pris: DKK 1.500</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/print-placeholder.jpg" alt="Tryk: Mikrokosmos">
-          <div class="gallery-info">
-            <div class="gallery-title">Mikrokosmos</div>
-            <div class="gallery-meta">Linoleumstryk, 2025</div>
-            <div class="gallery-price">DKK 400 (tryk)</div>
-            <a class="gallery-enquire" href="mailto:pulsepaint@gmail.com?subject=Forespørgsel%20om%20Mikrokosmos" tabindex="0" aria-label="Forespørg om Mikrokosmos">Forespørg</a>
-          </div>
+            <img src="assets/images/image4.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 4">
+          <p>Billedtekst 4</p>
+          <div class="gallery-price">Pris: DKK 1.800</div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/image5.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 5">
+          <p>Billedtekst 5</p>
+          <div class="gallery-price">Pris: DKK 2.000</div>
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/image6.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 6">
+          <p>Billedtekst 6</p>
+          <div class="gallery-price">Pris: DKK 2.200</div>
         </div>
       </div>
     </section>
@@ -180,8 +205,35 @@
       <a class="sidebar-btn" href="#contact">Book møde for tidsskriftscover</a>
     </aside>
   </div>
+  <section id="contact-cta">
+    <h2>Er du klar til at starte dit projekt?</h2>
+    <p>Send os din beskrivelse, og vi vender tilbage inden for 24 timer.</p>
+    <a href="#contact" class="btn primary">Kontakt os</a>
+  </section>
+  <section id="contact">
+    <h2>Kontakt os</h2>
+    <p>Email: <a href="mailto:info@pulsestudio.com">info@pulsestudio.com</a><br>Lokation: København, DK</p>
+  </section>
   <footer>
-    &copy; <span id="year"></span> pulsepaint. Alle rettigheder forbeholdes. | CVR: [tilføjes]
+    <div class="footer-container">
+      <div class="footer-col">
+          <img src="assets/logo-footer.png" loading="lazy" alt="Pulse Studio Logo" style="max-width:120px;">
+        <p>© 2026 Pulse Studio</p>
+      </div>
+      <div class="footer-col">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="#about">Om os</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Kontakt</h3>
+        <p>Email: info@pulsestudio.com<br>Adresse: København, DK</p>
+      </div>
+    </div>
   </footer>
   <!-- Kontakt Modal -->
   <div id="contactModal" style="display:none;position:fixed;z-index:2000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);align-items:center;justify-content:center;">

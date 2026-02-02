@@ -1,4 +1,192 @@
+footer {
+  background: #f0f0f0;
+  padding: 2em 1em;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-col {
+  flex: 1 1 200px;
+  margin: 1em;
+}
+.footer-col h3 {
+  margin-bottom: 0.5em;
+}
+.footer-col a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+#contact-cta {
+  text-align: center;
+  padding: 3em 1em;
+  background: #e0f7fa;
+  border-radius: var(--radius);
+  margin: 2em 0 0 0;
+}
+#contact-cta h2 {
+  margin-bottom: 0.5em;
+}
+#contact-cta p {
+  margin-bottom: 1em;
+}
+/* Portfolio Gallery Styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}
+.gallery-item img {
+  width: 100%;
+  border-radius: 4px;
+  transition: transform 0.18s;
+}
+.gallery-item p {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+/* Logo styles */
+.logo img {
+  max-height: 60px;
+}
+.logo-text {
+  color: var(--primary-color);
+  font-size: 1.75em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+/* Hero Section - bold gradient and white text */
+#hero {
+  text-align: center;
+  padding: 4em 2em;
+  background: linear-gradient(135deg, #439FDA, #2EBAC1);
+  color: #fff;
+  border-radius: var(--radius);
+  margin: 2.5rem auto 2.5rem auto;
+  box-shadow: var(--shadow);
+  max-width: 900px;
+}
+#hero h1 {
+  font-size: 2.7em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+#hero h2 {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: #fff;
+}
+#hero p {
+  font-size: 1.15em;
+  color: #fff;
+  margin-bottom: 2em;
+}
+.btn.primary {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 2em;
+  padding: 0.8em 2em;
+  text-decoration: none;
+  font-size: 1.13em;
+  margin: 0 0.7em 0.7em 0;
+  display: inline-block;
+  transition: background 0.18s, color 0.18s;
+}
+.btn.primary:hover, .btn.primary:focus {
+  background: var(--accent-dark);
+  color: #fff;
+}
+.btn.secondary {
+  background: #eafafc;
+  color: var(--primary-color);
+  font-weight: 600;
+  border-radius: 2em;
+  padding: 0.8em 2em;
+  text-decoration: none;
+  font-size: 1.13em;
+  margin: 0 0.7em 0.7em 0;
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  transition: background 0.18s, color 0.18s;
+}
+.btn.secondary:hover, .btn.secondary:focus {
+  background: var(--primary-color);
+  color: #fff;
+}
+/* Main navigation styles */
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1001;
+  list-style: none;
+  margin: 0;
+}
+.main-nav li {
+  position: relative;
+  margin: 0 1em;
+}
+.main-nav a {
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.4em 0.7em;
+  border-radius: 2em;
+  transition: color 0.18s, background 0.18s;
+}
+.main-nav li a:hover, .main-nav li a:focus {
+  color: var(--primary-color);
+  background: #eafafc;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 2.2em;
+  background: #fff;
+  box-shadow: 0 4px 16px #0001;
+  border-radius: 0 0 12px 12px;
+  min-width: 200px;
+  padding: 0.7em 0.2em;
+  z-index: 1002;
+  list-style: none;
+}
+.submenu li {
+  margin: 0;
+}
+.submenu a {
+  color: var(--text-color);
+  text-transform: none;
+  font-size: 1em;
+  border-radius: 0;
+  padding: 0.5em 1.2em;
+  display: block;
+}
+.submenu a:hover, .submenu a:focus {
+  color: var(--primary-color);
+  background: #eafafc;
+}
+.main-nav li:hover > .submenu,
+.main-nav li:focus-within > .submenu {
+  display: block;
+}
 /*
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
   pulsepaint portfolio site
   Shared styles for EN/DA
   Palette: off-white, sand, soft gray, warm accent
@@ -7,6 +195,8 @@
 
 /* Refined palette for premium calm look */
 :root {
+    --primary-color: #2EBAC1;
+    --text-color: #333;
   --bg: #f7fafc;
   --sand: #fdf6ee;
   --gray: #8a8f98;
@@ -14,51 +204,55 @@
   --accent-dark: #0e7fa6;
   --accent-light: #aaf0ff;
   --coral: #ff6f61;
+    background: #fff;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
   --teal: #1cc8ee;
   --text: #23272f;
-  --header: #fff;
-  --border: #e0e6ed;
+    background: var(--primary-color);
+    color: #fff;
   --shadow: 0 2px 12px rgba(28,200,238,0.08);
   --radius: 14px;
-  --nav-bg: rgba(255,255,255,0.96);
-  --nav-blur: blur(14px);
-}
+    background: var(--accent-dark);
+    color: #fff;
+    box-shadow: 0 4px 18px #2EBAC133;
 
 :root {
-  --bg: #f7faff;
+    background: var(--primary-color);
   --sand: #eaf2fb;
   --gray: #7a8ca3;
-  --accent: #2563b8;
+    background: var(--accent-dark);
   --accent-dark: #1e3a8a;
   --accent-light: #b6d4fe;
-  --coral: #2563b8;
+        background: var(--primary-color);
   --teal: #2563b8;
   --text: #23272f;
-  --header: #fff;
+        background: var(--accent-dark);
   --border: #dbeafe;
   --shadow: 0 2px 12px rgba(37,99,184,0.08);
-  --radius: 14px;
+    color: var(--primary-color);
   --nav-bg: rgba(255,255,255,0.96);
   --nav-blur: blur(14px);
-}
-
+    background: var(--primary-color);
+    color: #fff;
 /* Skip to content link */
 .skip-link {
-  position: absolute;
-  left: -999px;
+    color: #fff;
+    background: var(--primary-color);
   top: 0;
   background: var(--accent);
-  color: #fff;
-  padding: 0.7em 1.2em;
-  z-index: 1001;
-  border-radius: 0 0 var(--radius) var(--radius);
-  font-size: 1rem;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 0 0.7rem 0;
+    color: var(--primary-color);
+    letter-spacing: 0.01em;
   text-decoration: none;
   transition: left 0.2s;
-  opacity: 0;
-  pointer-events: none;
-}
-.skip-link:focus {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 0.7em;
+    font-weight: 600;
   left: 1rem;
   opacity: 1;
   pointer-events: auto;
