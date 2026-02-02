@@ -251,25 +251,38 @@ footer {
     color: #fff;
 /* Skip to content link */
 .skip-link {
-    color: #fff;
-    background: var(--primary-color);
-  top: 0;
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  color: #fff;
   background: var(--accent);
-    font-size: 2.5em;
-    font-weight: 700;
-    margin: 0 0 0.7rem 0;
-    color: var(--primary-color);
-    letter-spacing: 0.01em;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
   text-decoration: none;
-  transition: left 0.2s;
-    font-size: 2em;
-    color: var(--primary-color);
-    margin-bottom: 0.7em;
-    font-weight: 600;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: 2px solid #fff;
+  transition: opacity 0.2s;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  position: absolute;
   left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  z-index: 2000;
   opacity: 1;
   pointer-events: auto;
-  outline: 2px solid var(--accent);
 }
 
 /* Sticky nav bar */
