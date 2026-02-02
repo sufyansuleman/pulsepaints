@@ -1,18 +1,20 @@
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <blockquote>
-        <p>“Dette team lavede fantastiske figurer til vores artikel.”</p>
-        <footer>— Dr. Hansen, Aarhus Universitet</footer>
-      </blockquote>
-      <blockquote>
-        <p>“Meget professionel og kreativ service.”</p>
-        <footer>— Mette Jensen, Kunde</footer>
-      </blockquote>
-      <blockquote>
-        <p>“Vi var imponerede over kvaliteten og hurtigheden.”</p>
-        <footer>— BioLab, Aarhus</footer>
-      </blockquote>
-    </section>
+  <!-- ...existing code... -->
+  <section id="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>
+      <p>“Dette team lavede fantastiske figurer til vores artikel.”</p>
+      <footer>— Dr. Hansen, Aarhus Universitet</footer>
+    </blockquote>
+    <blockquote>
+      <p>“Meget professionel og kreativ service.”</p>
+      <footer>— Mette Jensen, Kunde</footer>
+    </blockquote>
+    <blockquote>
+      <p>“Vi var imponerede over kvaliteten og hurtigheden.”</p>
+      <footer>— BioLab, Aarhus</footer>
+    </blockquote>
+  </section>
+  <!-- ...existing code before footer... -->
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -73,35 +75,73 @@
       <div class="gallery">
         <div class="gallery-item">
             <img src="assets/images/image1.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 1">
-          <p>Billedtekst 1</p>
-          <div class="gallery-price">Pris: DKK 1.000</div>
         </div>
         <div class="gallery-item">
             <img src="assets/images/image2.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 2">
-          <p>Billedtekst 2</p>
-          <div class="gallery-price">Pris: DKK 1.200</div>
         </div>
         <div class="gallery-item">
             <img src="assets/images/image3.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 3">
-          <p>Billedtekst 3</p>
-          <div class="gallery-price">Pris: DKK 1.500</div>
         </div>
         <div class="gallery-item">
             <img src="assets/images/image4.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 4">
-          <p>Billedtekst 4</p>
-          <div class="gallery-price">Pris: DKK 1.800</div>
         </div>
         <div class="gallery-item">
             <img src="assets/images/image5.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 5">
-          <p>Billedtekst 5</p>
-          <div class="gallery-price">Pris: DKK 2.000</div>
         </div>
         <div class="gallery-item">
             <img src="assets/images/image6.webp" loading="lazy" alt="Eksempel på videnskabelig illustration 6">
-          <p>Billedtekst 6</p>
-          <div class="gallery-price">Pris: DKK 2.200</div>
         </div>
       </div>
+        <section id="art-sales">
+          <h2>Kunstsalg & Kollektioner</h2>
+          <div class="gallery art-sales-gallery">
+            <div class="gallery-item">
+              <img src="../images/art-sale1.jpg" loading="lazy" alt="Kunstværk 1" class="popout-img" onclick="openArtModal('../images/art-sale1-large.jpg', 'DKK 1.000')">
+              <div class="gallery-price">Pris: DKK 1.000</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/art-sale2.jpg" loading="lazy" alt="Kunstværk 2" class="popout-img" onclick="openArtModal('../images/art-sale2-large.jpg', 'DKK 1.200')">
+              <div class="gallery-price">Pris: DKK 1.200</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/art-sale3.jpg" loading="lazy" alt="Kunstværk 3" class="popout-img" onclick="openArtModal('../images/art-sale3-large.jpg', 'DKK 1.500')">
+              <div class="gallery-price">Pris: DKK 1.500</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/art-sale4.jpg" loading="lazy" alt="Kunstværk 4" class="popout-img" onclick="openArtModal('../images/art-sale4-large.jpg', 'DKK 1.800')">
+              <div class="gallery-price">Pris: DKK 1.800</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/art-sale5.jpg" loading="lazy" alt="Kunstværk 5" class="popout-img" onclick="openArtModal('../images/art-sale5-large.jpg', 'DKK 2.000')">
+              <div class="gallery-price">Pris: DKK 2.000</div>
+            </div>
+            <div class="gallery-item">
+              <img src="../images/art-sale6.jpg" loading="lazy" alt="Kunstværk 6" class="popout-img" onclick="openArtModal('../images/art-sale6-large.jpg', 'DKK 2.200')">
+              <div class="gallery-price">Pris: DKK 2.200</div>
+            </div>
+          </div>
+        </section>
+        <!-- Art Modal -->
+        <div id="artModal" style="display:none;position:fixed;z-index:3000;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.32);align-items:center;justify-content:center;">
+          <div style="background:#fff;border-radius:16px;max-width:600px;width:90vw;padding:2.2rem 1.5rem 1.5rem 1.5rem;box-shadow:0 8px 32px #0002;position:relative;">
+            <button id="closeArtModal" style="position:absolute;top:0.7em;right:1em;background:none;border:none;font-size:1.5em;line-height:1;color:#aaa;cursor:pointer;">&times;</button>
+            <img id="artModalImg" src="" alt="Kunstværk" style="width:100%;max-width:520px;border-radius:12px;box-shadow:0 2px 8px #1cc8ee22;">
+            <div id="artModalPrice" style="font-size:1.2em;color:var(--accent);margin-top:0.7em;"></div>
+          </div>
+        </div>
+        <script>
+          function openArtModal(imgSrc, price) {
+            document.getElementById('artModalImg').src = imgSrc;
+            document.getElementById('artModalPrice').textContent = 'Pris: ' + price;
+            document.getElementById('artModal').style.display = 'flex';
+          }
+          document.getElementById('closeArtModal').onclick = function() {
+            document.getElementById('artModal').style.display = 'none';
+          };
+          document.getElementById('artModal').onclick = function(e) {
+            if(e.target === this) this.style.display = 'none';
+          };
+        </script>
     </section>
 
     <section id="workshops">
@@ -199,10 +239,7 @@
         <li><span class="sidebar-label">By:</span> Aarhus</li>
         <li><span class="sidebar-label">Instagram:</span> <span style="color:var(--gray);">(kommer snart)</span></li>
       </ul>
-      <a class="sidebar-btn" href="#contact">Book workshop</a>
-      <a class="sidebar-btn" href="#contact">Bestil et tidsskriftscover</a>
-      <a class="sidebar-btn" href="#contact">Book et møde om tidsskriftscover</a>
-      <a class="sidebar-btn" href="#contact">Book møde for tidsskriftscover</a>
+      <a class="sidebar-btn" href="#contact">Book a meeting to discuss journal cover</a>
     </aside>
   </div>
   <section id="contact-cta">

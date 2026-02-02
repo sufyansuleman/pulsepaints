@@ -24,6 +24,12 @@ footer {
   background: #e0f7fa;
   border-radius: var(--radius);
   margin: 2em 0 0 0;
+  color: #188ba0;
+}
+#contact-cta h2, #contact-cta p, #contact-cta a.btn, #contact-cta .btn {
+  color: #188ba0 !important;
+  font-weight: 600;
+}
 }
 #contact-cta h2 {
   margin-bottom: 0.5em;
