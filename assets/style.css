@@ -331,7 +331,7 @@ header {
   gap: 1.5rem;
 }
 .nav-links a {
-  color: var(--accent-dark);
+  color: #0f4f63;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -439,7 +439,9 @@ nav {
 nav a {
   color: var(--text);
   text-decoration: none;
-  margin: 0 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
   font-weight: 500;
   letter-spacing: 0.02em;
   transition: color 0.2s;
@@ -634,25 +636,24 @@ section:last-child {
   margin-bottom: 0;
 }
 section h2 {
-  font-size: 1.4rem;
+    position: sticky;
+    top: 0;
   color: var(--accent);
   margin-bottom: 0.7em;
-  font-weight: 600;
-}
-
-.workshops-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 1.2rem;
-}
-.workshop {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    border-radius: 0 0 14px 14px;
   background: var(--sand);
   border-radius: var(--radius);
   padding: 1.2rem 1rem 1.1rem 1rem;
   flex: 1 1 220px;
   min-width: 180px;
-  box-shadow: var(--shadow);
+    z-index: 1500;
   margin-bottom: 0.5rem;
 }
 .workshop h3 {
@@ -660,6 +661,7 @@ section h2 {
   color: var(--text);
   margin: 0 0 0.3em 0;
   font-weight: 500;
+    z-index: 1600;
 }
 .workshop p {
   font-size: 1rem;
